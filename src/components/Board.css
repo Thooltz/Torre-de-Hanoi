@@ -1,0 +1,22 @@
+.board {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 30px;
+  padding: 50px 30px;
+  min-height: 450px;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  border-radius: 25px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .board {
+    gap: 15px;
+    padding: 40px 15px;
+    min-height: 350px;
+    border-radius: 20px;
+  }
+}
+

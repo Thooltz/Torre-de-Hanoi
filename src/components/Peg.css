@@ -1,0 +1,160 @@
+.peg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 200px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.peg-container.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(0.5);
+}
+
+.peg-container:not(.disabled):hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.peg-container:not(.disabled):hover .peg-rod {
+  box-shadow: 0 0 25px rgba(102, 126, 234, 0.4);
+}
+
+.peg-label {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.peg-container.selected .peg-label {
+  color: #667eea;
+  text-shadow: 
+    0 0 20px rgba(102, 126, 234, 0.8),
+    0 0 40px rgba(102, 126, 234, 0.4);
+  animation: labelPulse 2s ease-in-out infinite;
+  transform: scale(1.1);
+}
+
+@keyframes labelPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 20px rgba(102, 126, 234, 0.8),
+      0 0 40px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 30px rgba(102, 126, 234, 1),
+      0 0 60px rgba(102, 126, 234, 0.6);
+  }
+}
+
+.peg-base {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 50%, #5a4a3f 100%);
+  border-radius: 15px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 0, 0, 0.1) inset,
+    0 2px 4px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+  z-index: 1;
+}
+
+.peg-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+.peg-stack {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.peg-rod {
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(135deg, #8b7355 0%, #6b5d4f 50%, #5a4a3f 100%);
+  border-radius: 5px;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 0, 0, 0.2) inset,
+    0 2px 4px rgba(255, 255, 255, 0.1) inset;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.peg-rod::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+  border-radius: 5px 5px 0 0;
+}
+
+.peg-container.selected .peg-rod {
+  box-shadow: 
+    0 0 30px rgba(102, 126, 234, 1),
+    0 0 60px rgba(102, 126, 234, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: rodGlow 2s ease-in-out infinite;
+}
+
+@keyframes rodGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(102, 126, 234, 1),
+      0 0 60px rgba(102, 126, 234, 0.5),
+      0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(102, 126, 234, 1.2),
+      0 0 80px rgba(102, 126, 234, 0.7),
+      0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .peg-container {
+    max-width: 120px;
+  }
+
+  .peg-label {
+    font-size: 1.2rem;
+  }
+
+  .peg-stack {
+    min-height: 200px;
+  }
+}
+
