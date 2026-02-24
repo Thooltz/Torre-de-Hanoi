@@ -67,49 +67,49 @@
 }
 
 .disk.size-1 {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #ff4757 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
   width: 60px;
   animation-delay: 0.1s;
 }
 
 .disk.size-2 {
-  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 50%, #26d0ce 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
   width: 80px;
   animation-delay: 0.2s;
 }
 
 .disk.size-3 {
-  background: linear-gradient(135deg, #ffe66d 0%, #ffd93d 50%, #ffc312 100%);
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
   width: 100px;
   animation-delay: 0.3s;
 }
 
 .disk.size-4 {
-  background: linear-gradient(135deg, #a8e6cf 0%, #88d8a3 50%, #55efc4 100%);
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 50%, #1a1a1a 100%);
   width: 120px;
   animation-delay: 0.4s;
 }
 
 .disk.size-5 {
-  background: linear-gradient(135deg, #ff8b94 0%, #ff6b9d 50%, #fd79a8 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #1a1a1a 50%, #000000 100%);
   width: 140px;
   animation-delay: 0.5s;
 }
 
 .disk.size-6 {
-  background: linear-gradient(135deg, #c7ceea 0%, #a8b5e0 50%, #a29bfe 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 50%, #7f1d1d 100%);
   width: 160px;
   animation-delay: 0.6s;
 }
 
 .disk.size-7 {
-  background: linear-gradient(135deg, #ffd89b 0%, #ff9a9e 50%, #feca57 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #991b1b 100%);
   width: 180px;
   animation-delay: 0.7s;
 }
 
 .disk.size-8 {
-  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #74b9ff 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 50%, #dc2626 100%);
   width: 200px;
   animation-delay: 0.8s;
 }

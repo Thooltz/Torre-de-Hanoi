@@ -5,12 +5,13 @@
   border-radius: 30px;
   padding: 40px;
   box-shadow: 
-    0 25px 80px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
-    0 0 100px rgba(102, 126, 234, 0.1);
+    0 25px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 2px rgba(220, 38, 38, 0.2) inset,
+    0 0 100px rgba(220, 38, 38, 0.15);
   animation: slideUp 0.6s ease-out;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .app::before {
@@ -20,7 +21,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
   pointer-events: none;
 }
@@ -49,7 +50,7 @@
 }
 
 .app-header h1 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #000000 0%, #dc2626 50%, #991b1b 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +60,7 @@
   margin-bottom: 15px;
   letter-spacing: -1px;
   animation: gradientText 3s ease infinite;
-  text-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+  text-shadow: 0 0 30px rgba(220, 38, 38, 0.4);
   position: relative;
 }
 
@@ -71,9 +72,10 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  background: linear-gradient(90deg, transparent, #dc2626, transparent);
   border-radius: 2px;
   animation: shimmer 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
 }
 
 @keyframes gradientText {
@@ -87,7 +89,7 @@
 }
 
 .app-header p {
-  color: #666;
+  color: #2d2d2d;
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 20px;
@@ -111,34 +113,35 @@
 
 .config-group label {
   font-weight: 600;
-  color: #555;
+  color: #1a1a1a;
 }
 
 .config-group select,
 .config-group input {
   padding: 10px 16px;
-  border: 2px solid rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(220, 38, 38, 0.3);
   border-radius: 12px;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-weight: 500;
+  color: #1a1a1a;
 }
 
 .config-group select:hover,
 .config-group input:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  border-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
   transform: translateY(-2px);
 }
 
 .config-group select:focus,
 .config-group input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(102, 126, 234, 0.3);
+  border-color: #dc2626;
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.15), 0 4px 12px rgba(220, 38, 38, 0.4);
   transform: translateY(-2px);
 }
 
@@ -188,28 +191,28 @@
 }
 
 .status-message.info {
-  color: #667eea;
-  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .status-message.success {
-  color: #2e7d32;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #ffffff;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  border: 1px solid rgba(220, 38, 38, 0.5);
 }
 
 .status-message.error {
-  color: #c62828;
-  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #ffffff;
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+  border: 1px solid rgba(153, 27, 27, 0.6);
   animation: shake 0.5s, fadeInScale 0.3s ease-out;
 }
 
 .status-message.warning {
-  color: #e65100;
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-  border: 1px solid rgba(255, 152, 0, 0.3);
+  color: #ffffff;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: 1px solid rgba(239, 68, 68, 0.5);
 }
 
 @keyframes shake {
@@ -224,16 +227,16 @@
   font-weight: 700;
   margin: 20px 0;
   padding: 18px;
-  background: rgba(102, 126, 234, 0.05);
+  background: rgba(220, 38, 38, 0.08);
   border-radius: 15px;
-  border: 2px solid rgba(102, 126, 234, 0.1);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+  border: 2px solid rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
   position: relative;
   overflow: hidden;
 }
 
 .moves-counter span {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #dc2626 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -248,7 +251,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.15), transparent);
   animation: pulse 3s ease-in-out infinite;
 }
 
